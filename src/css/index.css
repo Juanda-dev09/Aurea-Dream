@@ -62,3 +62,23 @@
     --transition-slow: 1s ease-in-out;
 }
 
+.content_socialNetworks-list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-18);
+    margin: 0;
+    padding: 0;
+}
+
+.content_socialNetworks-item i {
+    font-size: 32px;
+    color: var(--color-charcoal);
+    cursor: pointer;
+    transition: color var(--transition-fast);
+}
+
+.content_socialNetworks-item i:hover {
+    color: var(--color-taupe-brown);
+}
+
