@@ -1,37 +1,51 @@
 # Aurea Dream
 
-Proyecto web en desarrollo tipo **landing + e-commerce** usando solo **HTML, CSS y JS** (sin framework por ahora).
+Proyecto web en desarrollo tipo **landing + e-commerce** construido con **HTML, CSS y JavaScript vanilla**.
 
-## Avance actual
+## Estado actual del proyecto
 
-- Estructura base del proyecto creada para escalar secciones de tienda y landing.
-- Página principal `index.html` con encabezado inicial.
-- Menú de navegación con opciones: Inicio, Productos y Rutinas.
-- Íconos del header implementados con **Boxicons CDN**: buscar, favoritos, carrito y usuario.
-- Sistema de variables CSS en `src/css/index.css` (colores, tamaños, espaciados, breakpoints y transiciones).
-- Estilos iniciales para visualización y hover de íconos.
+Actualmente la landing principal está maquetada en `index.html` con tres secciones:
 
-## Estructura creada
+- `#home`: Hero principal con título, texto y CTA.
+- `#product`: Bloque de producto destacado con imagen, rating, precio, cantidad y botones de compra.
+- `#routines`: Sección de rutinas con layout en grid y tres tarjetas inferiores equilibradas en ancho.
 
-- `public/`
+## Funcionalidades implementadas
+
+- Navbar fijo con enlaces a secciones internas: Inicio, Productos y Rutinas.
+- Estado activo del menú (`activeMenu`) con cambio dinámico al hacer clic.
+- `Inicio` activo por defecto al cargar la página.
+- Scroll suave por anclas usando JavaScript (`scrollIntoView`).
+- Scroll con rueda del mouse desactivado (navegación enfocada en clic del navbar).
+- Íconos integrados con **Boxicons** (incluyendo variantes rellenas como `bxs-star`).
+
+## Estilos y organización
+
+- Variables globales en `src/css/index.css`:
+  - Paleta de colores
+  - Tipografías
+  - Escalas de tamaño
+  - Espaciados
+  - Transiciones
+  - Breakpoints base
+- Estilos de producto en `src/css/product.css`.
+- Estilos de rutinas en `src/css/routines.css`.
+- Lógica de interacción en `src/js/index.js`.
+
+## Estructura principal
+
+- `index.html`
+- `README.md`
 - `src/css/`
 - `src/js/`
 - `src/assets/images/`
 - `src/assets/icons/`
-- `src/assets/products/`
-- `src/components/`
-- `src/data/`
-- `src/pages/landing/`
-- `src/pages/tienda/`
-- `src/pages/producto/`
-- `src/pages/carrito/`
-- `src/pages/checkout/`
+- `src/pages/`
 
-## Siguientes tareas
+## Próximos pasos recomendados
 
-- Maquetar el hero principal de la landing.
-- Crear sección destacada de productos en inicio.
-- Construir cards de producto reutilizables en `src/components/`.
-- Definir estructura base para página de producto y carrito.
-- Conectar navegación entre páginas (`landing`, `tienda`, `producto`, `carrito`).
-- Agregar estilos responsive iniciales para móvil y tablet.
+- Completar estilos visuales finales de la sección `#routines` (contenido real e imágenes).
+- Implementar versión responsive (mobile y tablet) para navbar y grids.
+- Mejorar accesibilidad: `alt` descriptivos, foco visible y etiquetas semánticas.
+- Conectar botones de producto con flujo real (carrito/checkout).
+- Agregar optimización de assets (imágenes y peso de recursos).
