@@ -8,7 +8,9 @@
       rel="stylesheet"
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
     />
+    <link href="https://cdn.boxicons.com/animations.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="src/css/index.css" />
+    <script defer src="src/js/index.js"></script>
   </head>
   <body>
     <header class="headerPage-aureaDerm">
@@ -26,15 +28,14 @@
               <a href="#home" class="headerPage-aureaDerm__menu-link">Inicio</a>
             </li>
             <li class="headerPage-aureaDerm__menu-item">
-              <a
-                href="src/pages/producto/product.html"
-                class="headerPage-aureaDerm__menu-link"
-                target="_blank"
+              <a href="#product" class="headerPage-aureaDerm__menu-link"
                 >Productos</a
               >
             </li>
             <li class="headerPage-aureaDerm__menu-item">
-              <a href="#" class="headerPage-aureaDerm__menu-link">Rutinas</a>
+              <a href="#routines" class="headerPage-aureaDerm__menu-link"
+                >Rutinas</a
+              >
             </li>
           </ul>
         </nav>
@@ -67,6 +68,125 @@
       <section class="imagen_home">
         <img class="imaghome" src="src/assets/images/principal.png" alt="" />
         <div class="luna"></div>
+      </section>
+    </article>
+
+    <article class="content_producto" id="product">
+      <section class="shampoo">
+        <img class="imgShampoo" src="src\assets\images\producto.png" alt="" />
+      </section>
+      <section class="info_producto">
+        <header class="bx-content-headerInfo">
+          <h4 class="categoria">SKINCARE</h4>
+
+          <h2 class="texto_principal">
+            DEEP CLEAN <br />
+            Facial Cleanser
+          </h2>
+        </header>
+
+        <div class="reviews">
+          <span class="iconStar">
+            <i class="bx bxs-star bx-beat-hover"></i>
+          </span>
+          8/10 - <span class="txtReviews">15 Reviews</span>
+        </div>
+
+        <p class="texto_1">
+          Limpiador facial profundo ideal para piel normal a grasa. Su fórmula
+          penetra eficazmente para eliminar impurezas, exceso de grasa y
+          residuos, dejando la piel fresca, limpia y con una apariencia más
+          saludable.
+        </p>
+
+        <div class="bx-InfoDataProduct">
+          <h2 class="precio">$89.000</h2>
+          <p class="contenido">Contenido: 200 ml (6.7 fl oz)</p>
+        </div>
+
+        <section class="cantidad">
+          <button class="btnStyleGeneral"><i class="bx bx-minus"></i></button>
+          <span class="numbersCantidad">1</span>
+          <button class="btnStyleGeneral"><i class="bx bx-plus"></i></button>
+        </section>
+
+        <section class="botones">
+          <button class="agregar">AÑADIR AL CARRITO</button>
+          <button class="comprar">COMPRAR AHORA</button>
+        </section>
+      </section>
+    </article>
+
+    <article class="content__allRoutines" id="routines">
+      <section class="contentIntroductionPubli section1">
+        <h3 class="titlRoutines">Cuida tu piel, todos los días</h3>
+        <p class="txt">
+          Rutinas y productos diseñados para cada tipo de piel. Resultados
+          visibles desde el primer uso.
+        </p>
+
+        <div class="bx btnRoutines">
+          <a href="#" class="linkRoutines">Ver rutinas</a>
+          <span class="bx-iconArrow">
+            <i class="bx bx-right-arrow-alt"></i>
+          </span>
+        </div>
+
+        <figure class="content-infoCustomers">
+          <span class="bx-txt-Customers">+500 clientes satisfechos</span>
+        </figure>
+      </section>
+
+      <section class="section2">
+        <div class="bx-contentInfoPersonalizedRoutines">
+          <h3 class="titlePersonalizedRoutines">Rutinas personalizadas</h3>
+          <p class="txt">
+            Descubre combinaciones de productos según tu tipo de piel y
+            objetivos.
+          </p>
+        </div>
+
+        <div class="bx-btn-icon">
+          <span class="bx-txtExplorer">Explorar</span>
+          <i class="bx bx-right-arrow-alt"></i>
+        </div>
+      </section>
+
+      <section class="section3">
+        <div class="bx-contentInfoPersonalizedRoutines">
+          <h3 class="titlePersonalizedRoutines">Productos esenciales</h3>
+          <p class="txt">
+            Encuentra limpiadores, sérums y cremas para tu cuidado diario.
+          </p>
+        </div>
+
+        <div class="bx-btn-icon">
+          <i class="bx bx-right-arrow-alt"></i>
+        </div>
+      </section>
+
+      <section class="section4">
+        <div class="bx-imgWomen">
+          <img src="" alt="" class="imgWomen" />
+        </div>
+
+        <div class="bx-contentInfoPersonalizedRoutines">
+          <span class="titlePersonalizedRoutines">Consejos para tu piel</span>
+          <p class="txt">
+            Recibe tips, rutinas y novedades directamente en tu correo.
+          </p>
+        </div>
+
+        <div class="bx-contentInfoPersonalizedRoutines">
+          <input
+            type="email"
+            placeholder="Ingresa tu email"
+            class="emailRoutines"
+          />
+          <div class="bx-btnSendRoutines">
+            <button type="submit">SUSCRIBIRME</button>
+          </div>
+        </div>
       </section>
     </article>
   </body>

@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playpen+Sans+Thai:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url(./product.css);
+@import url(./routines.css);
 
 :root {
   --color-soft-ivory: #f6f4ee;
@@ -12,6 +13,7 @@
   /* Font Sizes */
   --font-size-10: 10px;
   --font-size-12: 12px;
+  --font-size-13: 13px;
   --font-size-14: 14px;
   --font-size-16: 16px;
   --font-size-18: 18px;
@@ -22,6 +24,7 @@
   --font-size-28: 28px;
   --font-size-30: 30px;
   --font-size-32: 32px;
+  --font-size-52: 52px;
   --font-size-60: 60px;
   --font-size-62: 62px;
   --font-size-64: 64px;
@@ -78,6 +81,10 @@
 
 html {
   scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
 }
 
 body {

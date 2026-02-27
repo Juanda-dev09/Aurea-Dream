@@ -1,0 +1,38 @@
+.content__allRoutines {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  gap: var(--spacing-32);
+  padding: 5.8rem 4rem 1rem 4rem;
+
+  .section1 {
+    grid-column: span 3 / span 3;
+    grid-row: span 3 / span 3;
+    border: 2px solid blue;
+  }
+
+  .section2 {
+    grid-column: span 1 / span 1;
+    grid-row: span 3 / span 3;
+    grid-row-start: 4;
+    border: 2px solid red;
+  }
+
+  .section3 {
+    grid-column: span 1 / span 1;
+    grid-row: span 3 / span 3;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    border: 2px solid green;
+  }
+
+  .section4 {
+    grid-column: span 1 / span 1;
+    grid-row: span 3 / span 3;
+    grid-column-start: 3;
+    grid-row-start: 4;
+    border: 2px solid purple;
+  }
+}
