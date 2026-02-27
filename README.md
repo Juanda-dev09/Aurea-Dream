@@ -42,7 +42,7 @@ Actualmente la landing principal está maquetada en `index.html` con tres seccio
 - `src/assets/icons/`
 - `src/pages/`
 
-## Próximos pasos recomendados
+## Próximos pasos
 
 - Completar estilos visuales finales de la sección `#routines` (contenido real e imágenes).
 - Implementar versión responsive (mobile y tablet) para navbar y grids.
