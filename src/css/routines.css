@@ -3,14 +3,111 @@
   height: 100vh;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(6, 1fr);
+  grid-template-rows: repeat(3, 1.1fr) repeat(3, 0.9fr);
   gap: var(--spacing-32);
   padding: 5.8rem 4rem 1rem 4rem;
 
   .section1 {
+    position: relative;
     grid-column: span 3 / span 3;
     grid-row: span 3 / span 3;
-    border: 2px solid blue;
+
+    background: var(--gradient-1);
+    border-radius: var(--border-radius-14);
+    display: flex;
+
+    .content_InfoRoutinesIntroduction {
+      width: 75%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      padding: 2rem 0 2rem 2rem;
+      justify-content: space-between;
+
+      .bx-infoRoutines {
+        display: flex;
+        flex-direction: column;
+        gap: var(--spacing-16);
+
+        .titlRoutines {
+          font-size: var(--font-size-52);
+          font-family: var(--font-family-Michroma);
+          font-weight: lighter;
+          letter-spacing: 1px;
+        }
+
+        .txt {
+          font-size: var(--font-size-18);
+          width: 45ch;
+        }
+      }
+
+      .bx-btnRoutines {
+        width: fit-content;
+        height: fit-content;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 12px 32px;
+        background-color: var(--color-pure-white);
+        border-radius: 999px;
+        margin-top: var(--spacing-32);
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        .linkRoutines {
+          color: var(--color-charcoal);
+          text-decoration: none;
+          font-size: var(--font-size-16);
+        }
+
+        .bx-iconArrow {
+          display: flex;
+        }
+
+        &:hover {
+          background-color: var(--color-soft-ivory);
+
+          .bx-iconArrow {
+            animation: ToRightArrow 1s ease-in-out infinite;
+          }
+        }
+      }
+    }
+
+    .bx-imageModelRoutines {
+      width: 35%;
+      height: 100%;
+      overflow: hidden;
+
+      .modelRoutines {
+        width: 102%;
+        height: 102%;
+        object-fit: cover;
+        object-position: right;
+      }
+    }
+
+    .content-infoCustomers {
+      position: absolute;
+      width: fit-content;
+      padding: 12px 32px;
+      background-color: transparent;
+      backdrop-filter: blur(8px);
+      border: 2px solid hsl(0, 0%, 100%, 75%);
+      color: white;
+      text-shadow: 0px 0px 1px black;
+      border-radius: 999px;
+      bottom: 2rem;
+      right: 2rem;
+      transition: 0.5s ease-in-out;
+      font-family: var(--font-family-Michroma);
+      cursor: pointer;
+
+      &:hover {
+        background-color: hsl(0, 0%, 13%, 5%);
+      }
+    }
   }
 
   .section2 {
@@ -34,5 +131,31 @@
     grid-column-start: 3;
     grid-row-start: 4;
     border: 2px solid purple;
+  }
+}
+
+@keyframes ToRightArrow {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  25% {
+    transform: translateX(15px);
+    opacity: 0;
+  }
+
+  50% {
+    transform: translateX(0);
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    transform: translate(0);
+    opacity: 1;
   }
 }

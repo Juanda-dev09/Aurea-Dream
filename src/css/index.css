@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Playpen+Sans+Thai:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Michroma&family=Playpen+Sans+Thai:wght@100..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url(./product.css);
 @import url(./routines.css);
 
@@ -9,6 +9,8 @@
   --color-taupe-brown: #b4a291;
   --color-charcoal: #222222;
   --color-pure-white: #ffffff;
+  --gradient-1: linear-gradient(45deg, #f2e1cb, #fbbdb2);
+  --gradient-2: linear-gradient(0deg, var(--color-charcoal), #828282);
 
   /* Font Sizes */
   --font-size-10: 10px;
@@ -24,6 +26,8 @@
   --font-size-28: 28px;
   --font-size-30: 30px;
   --font-size-32: 32px;
+  --font-size-36: 36px;
+  --font-size-42: 42px;
   --font-size-52: 52px;
   --font-size-60: 60px;
   --font-size-62: 62px;
@@ -40,6 +44,7 @@
   --font-family-merriweather: "Merriweather", serif;
   --font-family-poppins: "Poppins", sans-serif;
   --font-family-Playpen: "Playpen Sans Thai", sans-serif;
+  --font-family-Michroma: "Michroma", sans-serif;
 
   /* Borders */
   --border-radius-10: 10px;
@@ -85,6 +90,14 @@ html {
 
 ::-webkit-scrollbar {
   display: none;
+}
+
+.txtGradient {
+  background: var(--gradient-2);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 body {
