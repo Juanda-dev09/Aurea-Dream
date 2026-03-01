@@ -1,51 +1,73 @@
 # Aurea Dream
 
-Proyecto web en desarrollo tipo **landing + e-commerce** construido con **HTML, CSS y JavaScript vanilla**.
+Landing web tipo skincare/e-commerce creada con HTML, CSS y JavaScript vanilla.
 
-## Estado actual del proyecto
+## Descripción
 
-Actualmente la landing principal está maquetada en `index.html` con tres secciones:
+El proyecto presenta una página principal con navegación por secciones y enfoque visual de marca:
 
-- `#home`: Hero principal con título, texto y CTA.
-- `#product`: Bloque de producto destacado con imagen, rating, precio, cantidad y botones de compra.
-- `#routines`: Sección de rutinas con layout en grid y tres tarjetas inferiores equilibradas en ancho.
+- `#home`: Hero con mensaje principal y CTA.
+- `#product`: Producto destacado con precio, reviews, cantidad y botones de acción.
+- `#routines`: Grid promocional de rutinas, productos y suscripción por correo.
 
-## Funcionalidades implementadas
+## Stack
 
-- Navbar fijo con enlaces a secciones internas: Inicio, Productos y Rutinas.
-- Estado activo del menú (`activeMenu`) con cambio dinámico al hacer clic.
-- `Inicio` activo por defecto al cargar la página.
-- Scroll suave por anclas usando JavaScript (`scrollIntoView`).
-- Scroll con rueda del mouse desactivado (navegación enfocada en clic del navbar).
-- Íconos integrados con **Boxicons** (incluyendo variantes rellenas como `bxs-star`).
+- HTML5
+- CSS3 (con variables y estilos modulares por archivo)
+- JavaScript vanilla
+- Boxicons (iconografía)
+- Google Fonts
 
-## Estilos y organización
+## Estructura del proyecto
 
-- Variables globales en `src/css/index.css`:
-  - Paleta de colores
-  - Tipografías
-  - Escalas de tamaño
-  - Espaciados
-  - Transiciones
-  - Breakpoints base
-- Estilos de producto en `src/css/product.css`.
-- Estilos de rutinas en `src/css/routines.css`.
-- Lógica de interacción en `src/js/index.js`.
+```text
+Aurea Dream/
+├─ index.html
+├─ README.md
+└─ src/
+   ├─ assets/
+   │  ├─ icons/
+   │  └─ images/
+   ├─ css/
+   │  ├─ index.css
+   │  ├─ product.css
+   │  └─ routines.css
+   └─ js/
+      └─ index.js
+```
 
-## Estructura principal
+## Organización de estilos
 
-- `index.html`
-- `README.md`
-- `src/css/`
-- `src/js/`
-- `src/assets/images/`
-- `src/assets/icons/`
-- `src/pages/`
+- `src/css/index.css`: variables globales (colores, tipografías, espaciados, tamaños, transiciones) y estilos base.
+- `src/css/product.css`: estilos de la sección de producto.
+- `src/css/routines.css`: estilos de la sección de rutinas.
 
-## Próximos pasos
+### Mejoras recientes de mantenimiento
 
-- Completar estilos visuales finales de la sección `#routines` (contenido real e imágenes).
-- Implementar versión responsive (mobile y tablet) para navbar y grids.
-- Mejorar accesibilidad: `alt` descriptivos, foco visible y etiquetas semánticas.
-- Conectar botones de producto con flujo real (carrito/checkout).
-- Agregar optimización de assets (imágenes y peso de recursos).
+- Reducción de repetición en tarjetas de rutinas mediante clase compartida `routine-card`.
+- Consolidación de estilos comunes de botones en la sección de producto.
+- Limpieza semántica en `index.html`:
+  - rutas de imagen consistentes (`/`),
+  - textos `alt` descriptivos en imágenes principales.
+
+## Comportamiento actual (JS)
+
+En `src/js/index.js`:
+
+- Scroll con rueda del mouse desactivado.
+- Navegación por clic en el menú con `scrollIntoView({ behavior: "smooth" })`.
+- Cambio visual del item activo del navbar con clase `activeMenu`.
+
+## Cómo ejecutar
+
+No requiere build ni dependencias.
+
+1. Abre `index.html` en el navegador, o
+2. Levanta un servidor local simple (recomendado para rutas estáticas), por ejemplo con Live Server en VS Code/Cursor.
+
+## Próximos pasos recomendados
+
+- Implementar versión responsive completa (mobile/tablet/desktop).
+- Mejorar accesibilidad (focus states, contraste, labels y roles semánticos).
+- Conectar acciones de producto a flujo real (carrito/checkout).
+- Optimizar assets (peso de imágenes, formatos y lazy-loading).
