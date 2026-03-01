@@ -2,7 +2,7 @@
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1.2fr 1.2fr 0.8fr;
   grid-template-rows: repeat(3, 1.1fr) repeat(3, 0.9fr);
   gap: var(--spacing-32);
   padding: 5.8rem 4rem 1rem 4rem;
@@ -15,6 +15,7 @@
     background: var(--gradient-1);
     border-radius: var(--border-radius-14);
     display: flex;
+    user-select: none;
 
     .content_InfoRoutinesIntroduction {
       width: 75%;
@@ -85,6 +86,8 @@
         height: 102%;
         object-fit: cover;
         object-position: right;
+        user-select: none;
+        pointer-events: none;
       }
     }
 
@@ -111,18 +114,96 @@
   }
 
   .section2 {
+    position: relative;
     grid-column: span 1 / span 1;
     grid-row: span 3 / span 3;
     grid-row-start: 4;
-    border: 2px solid red;
+    background: url(../assets/images/ImageRoutines.jpg) center no-repeat;
+    background-size: cover;
+    border-radius: var(--border-radius-14);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -5rem;
+      left: -5rem;
+      width: 100px;
+      height: 100px;
+      border-radius: 999px;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: var(--transition-fast);
+      backdrop-filter: blur(3px);
+    }
+
+    &:hover {
+      &::before {
+        width: 700px;
+        height: 700px;
+        left: -7rem;
+        bottom: -7rem;
+      }
+      .bx-contentInfoPersonalizedRoutines {
+        transform: translateY(-30%);
+      }
+      .bx-btn-icon {
+        transform: translateY(0);
+      }
+    }
   }
 
   .section3 {
+    position: relative;
     grid-column: span 1 / span 1;
     grid-row: span 3 / span 3;
     grid-column-start: 2;
     grid-row-start: 4;
-    border: 2px solid green;
+    background: url(../assets/images/productSkinCare.webp) center no-repeat;
+    background-size: cover;
+    border-radius: var(--border-radius-14);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    overflow: hidden;
+    z-index: 1;
+    cursor: pointer;
+    user-select: none;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -5rem;
+      left: -5rem;
+      width: 100px;
+      height: 100px;
+      border-radius: 999px;
+      background-color: rgba(0, 0, 0, 0.5);
+      transition: var(--transition-fast);
+      backdrop-filter: blur(3px);
+    }
+
+    &:hover {
+      &::before {
+        width: 700px;
+        height: 700px;
+        left: -7rem;
+        bottom: -7rem;
+      }
+      .bx-contentInfoPersonalizedRoutines {
+        transform: translateY(-30%);
+      }
+      .bx-btn-icon {
+        transform: translateY(0);
+      }
+    }
   }
 
   .section4 {
@@ -130,7 +211,80 @@
     grid-row: span 3 / span 3;
     grid-column-start: 3;
     grid-row-start: 4;
-    border: 2px solid purple;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    user-select: none;
+
+    .bx-imgWomen {
+      width: 100%;
+      height: 140px;
+      border-radius: var(--border-radius-14);
+      overflow: hidden;
+
+      .imgWomen {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: top;
+        user-select: none;
+        pointer-events: none;
+      }
+    }
+
+    .bx-contentInfoAdicesRoutines {
+      display: flex;
+      flex-direction: column;
+      gap: var(--spacing-32);
+      .bx-contentInfoPersonalizedRoutines {
+        .titleAdvices {
+          color: var(--color-charcoal);
+          font-size: var(--font-size-18);
+        }
+
+        .txt {
+          color: #5858588d;
+          font-size: var(--font-size-14);
+          font-weight: 300;
+        }
+      }
+
+      .bx-contentEmailRoutines {
+        display: flex;
+        height: 35px;
+
+        .emailRoutines {
+          width: 100%;
+          border-radius: 999px;
+          border: 2px solid var(--color-taupe-brown);
+          text-indent: 1rem;
+          outline: none;
+          color: var(--color-charcoal);
+        }
+
+        .bx-btnSendRoutines {
+          width: 60%;
+
+          button[type="submit"] {
+            width: 100%;
+            height: 100%;
+            border-radius: 999px;
+            border: transparent;
+            color: var(--color-soft-ivory);
+            font-size: var(--font-size-12);
+            cursor: pointer;
+            background-color: var(--color-taupe-brown);
+            transition: 0.3s ease-in-out;
+            border: 2px solid var(--color-taupe-brown);
+
+            &:hover {
+              background-color: var(--color-soft-ivory);
+              color: var(--color-taupe-brown);
+            }
+          }
+        }
+      }
+    }
   }
 }
 

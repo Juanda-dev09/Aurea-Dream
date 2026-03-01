@@ -100,6 +100,55 @@ html {
   -webkit-text-fill-color: transparent;
 }
 
+.bx-contentInfoPersonalizedRoutines {
+  transition: var(--transition-fast);
+  transform: translateY(30%);
+
+  .titlePersonalizedRoutines {
+    font-family: var(--font-family-Michroma);
+    font-size: var(--font-size-18);
+    font-weight: lighter;
+    letter-spacing: 1px;
+    color: var(--color-sand-beige);
+    text-shadow: 0px 0px 1px black;
+  }
+
+  .txt {
+    font-size: var(--font-size-14);
+    color: var(--color-soft-ivory);
+    text-shadow: 0px 0px 1px black;
+    margin-top: var(--spacing-8);
+  }
+}
+
+.bx-btn-icon {
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background-color: var(--color-pure-white);
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: var(--font-size-10);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+  font-weight: var(--font-weight-medium);
+  transition: var(--transition-fast);
+  transform: translateY(300%);
+
+  &:hover {
+    background-color: var(--color-charcoal);
+    color: var(--color-pure-white);
+
+    .bx-right-arrow-alt {
+      animation: ToRightArrow 1.5s ease-in-out infinite;
+    }
+  }
+}
+
 body {
   background-color: var(--color-soft-ivory);
   font-family: var(--font-family-poppins);
